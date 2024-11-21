@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import SocialLoginButton from './components/SocialLoginButton';
 
-function App() {
+const App = () => {
+  const backendUrl = "http://localhost:5000"; // 백엔드 서버 URL
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>카카오 소셜 로그인 테스트</h1>
+      <SocialLoginButton
+        provider="kakao"
+        backendUrl={backendUrl}
+        label="카카오 로그인"
+        color="#FEE500"
+      />
     </div>
   );
-}
+};
 
 export default App;
