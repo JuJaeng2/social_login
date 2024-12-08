@@ -1,4 +1,5 @@
 import React from 'react';
+import './SocialLoginButton.css'; // 스타일 파일 추가
 
 const UserProfileCard = ({ userData }) => {
   if (!userData) return null;
@@ -10,7 +11,7 @@ const UserProfileCard = ({ userData }) => {
           <h2 className="text-2xl font-bold">{userData.name || "사용자"}</h2>
         </div>
       </div>
-      
+
       <div className="space-y-4">
         {userData.email && (
           <div className="flex items-center gap-3">
